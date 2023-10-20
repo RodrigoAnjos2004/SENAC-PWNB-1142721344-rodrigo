@@ -1,0 +1,358 @@
+body {
+  margin: 0px;
+  background-image:linear-gradient(#000000,#000000,#000000,#000000,#e36f41,#e36f41,#e36f41,#fff157,#e96fe1,#333,#000000);
+  padding: 0px;
+  font-family: "Playfair Display", serif;
+}
+
+.branco {
+  color: white;
+}
+
+.lateral {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  transform: translateX(-250px);
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: transform 0.5s;
+}
+.lateral .logo {
+  color: white;
+  height: 60px;
+  width: 60px;
+  margin: auto;
+  text-decoration: none;
+  display: flex;
+  border: 1px solid white;
+  border-radius: 100px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.lateral a:not(.logo) {
+  padding: 8px 8px 8px 0px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  text-align: center;
+  transition: 0.3s;
+}
+.lateral a:not(.logo):hover {
+  color: #f1f1f1;
+}
+.lateral .fechar {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#principal {
+  transition: margin-left 0.5s;
+}
+#principal .menu {
+  padding: 20px;
+  font-size: 1.6em;
+  color: white;
+  z-index: 10;
+  opacity: 0.6;
+  margin: 10px 0px 10px 20px;
+  position: absolute;
+  transition: opacity 0.2s ease;
+}
+#principal .menu:hover {
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+#principal .secao {
+  height: 100vh;
+  position: relative;
+}
+
+.secao-1 {
+  background: url("https://github.com/RodrigoAnjos2004/testable/blob/main/bg.png?raw=true");
+  background-size: cover;
+  background-position: bottom center;
+  transition: filter 0.3s ease; /* Adiciona uma transição suave para o efeito de hover */
+}
+
+
+.secao-1 .conteudo {
+  position: absolute;
+  max-width: 600px;
+  bottom: 25vh;
+  padding: 5px 170px;
+}
+.secao-1 .conteudo h1 {
+  margin: 100px 100px 0px -3px;
+  font-size: 5em;
+  color: #ead31f;
+  font-weight: bold;
+}
+.secao-1 .conteudo p {
+  color: white;
+  margin-bottom: 35px;
+}
+.secao-1 .conteudo a {
+  color: white;
+  border: solid 2px white;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.secao-1 .conteudo a:hover {
+  color: black;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+#principal .secao-2 {
+  height: 100%;
+}
+#principal .secao-2 .conteudo {
+  max-width: 800px;
+  margin: auto;
+  height: 600px;
+  padding-bottom: 5em;
+  padding-top: 4em;
+}
+#principal .secao-2 .conteudo .manchete {
+  font-size: 4em;
+  color: white;
+  position: relative;
+}
+#principal .secao-2 .conteudo .manchete:before {
+  content: "";
+  width: 200px;
+  background: #ead31f;
+  height: 3px;
+  left: -30%;
+  top: 50px;
+  position: absolute;
+}
+
+/* Quadro do Carrossel */
+#rolagem {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 600px;
+}
+#rolagem ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+#rolagem ul li {
+  float: left;
+  width: 600px;
+  height: 400px;
+  color: white;
+  margin: 0px 50px;
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+#rolagem .itemslide-ativo {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.caixa {
+  position: relative;
+}
+
+.caixa-esquerda {
+  float: left;
+  width: 40%;
+  top: 10%;
+  height: 80%;
+  background-size: cover;
+  box-shadow: inset 0px 0px 0px 200px #00000040;
+}
+
+.card-1 .caixa-esquerda {
+  background-image: url("https://www.euamogramadooficial.com.br/wp-content/uploads/2018/08/45-Festival-de-Cinema-de-Gramado-2017-08-17-18-20-23-CLE-0268.jpg");
+}
+
+.card-2 .caixa-esquerda {
+  background-image: url("https://www.euamogramadooficial.com.br/wp-content/uploads/2018/08/45-Festival-de-Cinema-de-Gramado-2017-08-17-18-20-23-CLE-0268.jpg");
+}
+
+.card-3 .caixa-esquerda {
+  background-image: url("https://www.euamogramadooficial.com.br/wp-content/uploads/2018/08/45-Festival-de-Cinema-de-Gramado-2017-08-17-18-20-23-CLE-0268.jpg");
+}
+
+.caixa-direita {
+  float: right;
+  text-align: left;
+  width: calc(60% - 50px);
+  height: 100%;
+  padding: 40px 25px 0px 25px;
+  background: #1b1b1b;
+}
+.caixa-direita p {
+  margin-bottom: 60px;
+}
+.caixa-direita h3 {
+  color: #ead31f;
+}
+.caixa-direita a {
+  color: white;
+  border: solid 2px white;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.caixa-direita a:hover {
+  color: black;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+#principal .secao-3 {
+  padding-top: 10vh;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+#principal .secao-3 .conteudo {
+  text-align: center;
+}
+#principal .secao-3 .depoimentos {
+  background-image: url("");
+  background-size: cover;
+  background-position: bottom center;
+  padding: 50px 0px;
+  box-shadow: inset 0px 0px 0px 100px #00000099;
+}
+#principal .secao-3 img {
+  width: 120px;
+}
+#principal .secao-3 h1, #principal .secao-3 p, #principal .secao-3 span {
+  color: white;
+}
+#principal .secao-3 h1 {
+  font-size: 2.2em;
+  margin-bottom: 60px;
+}
+
+#principal .secao-4 {
+  padding: 100px 0px;
+  height: initial;
+}
+#principal .secao-4 .conteudo {
+  max-width: 800px;
+  margin: auto;
+  padding-top: 4em;
+}
+#principal .secao-4 .conteudo p {
+  margin-bottom: 40px;
+}
+#principal .secao-4 .conteudo h1 {
+  margin-top: 0px;
+}
+#principal .secao-4 .conteudo a {
+  color: white;
+  border: solid 2px white;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+#principal .secao-4 .conteudo a:hover {
+  color: black;
+  background: white;
+  transition: all 0.2s ease;
+}
+#principal .secao-4 .conteudo .manchete {
+  font-size: 4em;
+  color: white;
+  position: relative;
+}
+#principal .secao-4 .conteudo .manchete:before {
+  content: "";
+  width: 200px;
+  background: #ead31f;
+  height: 3px;
+  left: -30%;
+  top: 50px;
+  position: absolute;
+}
+
+.rodape {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 0px;
+  background: black;
+  position: relative;
+}
+.rodape a {
+  color: #ead31f;
+  text-decoration: none;
+}
+
+.limpar-depois:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* html .limpar-depois {
+  zoom: 1;
+}
+
+/* IE6 */
+*:first-child + html .limpar-depois {
+  zoom: 1;
+}
+
+@media screen and (max-width: 760px) {
+  .secao-1 .conteudo {
+    max-width: 85%;
+    padding: 20px 40px;
+  }
+
+  .conteudo {
+    width: 90%;
+  }
+
+  .secao-3 .conteudo {
+    width: 100%;
+  }
+
+  .secao .conteudo .manchete:before {
+    display: none;
+  }
+
+  #rolagem ul li {
+    width: 500px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .lateral {
+    padding-top: 15px;
+  }
+
+  .lateral a {
+    font-size: 18px;
+  }
+}
